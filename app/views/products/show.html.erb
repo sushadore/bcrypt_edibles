@@ -1,0 +1,19 @@
+<h2><%= @product.name %></h2>
+<h4>Cost: <%= @product.cost %></h4>
+<h4>Country of origin: <%= @product.country_of_origin %></h4>
+
+<% if @product.reviews.any? %>
+
+<h4>Customer Reviews:</h4>
+  <ul>
+    <% @product.reviews.each do |review| %>
+      <li>
+        <%= review.author %>,
+        <%= review.content_body %>
+        <%= review.rating %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no reviews yet!</p>
+<% end %>

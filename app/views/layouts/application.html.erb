@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ExtravagantEdibles</title>
+    <title>Extravagant Edibles</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <h1 class="jumbotron">Extravagant Edibles</h1>
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
+      <%= yield %>
+      <p><%= link_to "Home", products_path %></p>
+    </div>
   </body>
 </html>
