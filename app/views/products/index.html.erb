@@ -1,13 +1,26 @@
-<h3>Products</h3>
+<h4>Here at Extravagant Edibles we work hard to make sure feedback is receieved and available so that our customers have the most up to date input in order to choose the perfect edible!</h4>
 
-<% if @products.any? %>
-  <% @products.each do |product| %>
+<h4>We always feature our most recently added delicasies and most reviewed edible for customers ready to make a quick decision!</h4>
+
+<h3>Recently Added!</h3>
+
+  <% @products.three_most_recent.each do |product| %>
     <ul>
       <li><%= link_to product.name, product_path(product) %> </li>
     </ul>
   <% end %>
-<% else %>
- <h4>There are no products yet!</h4>
-<% end %>
+
+  <h3>Product with Most Reviews</h3>
+  <% @products.most_reviews.each do |product| %>
+    <ul>
+      <li><%= link_to product.name, product_path(product) %> </li>
+    </ul>
+  <% end %>
+
+
+
+
+
+
 
 <%= link_to "Add Product", new_product_path %>
