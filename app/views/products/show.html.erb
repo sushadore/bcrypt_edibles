@@ -17,3 +17,8 @@
 <% else %>
   <p>There are no reviews yet!</p>
 <% end %>
+
+<%= link_to "Edit Product", edit_product_path(@product) %> |
+<%= link_to "Delete Product", product_path(@product),
+                         :data => {:confirm => "Confirm delete!",
+                                   :method => "delete"} %>
