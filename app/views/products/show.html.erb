@@ -22,3 +22,4 @@
 <%= link_to "Delete Product", product_path(@product),
                          :data => {:confirm => "Confirm delete!",
                                    :method => "delete"} %>
+<h4><%= link_to "Review Product", new_product_review_path(@product) %></h4>
