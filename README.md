@@ -4,9 +4,6 @@ Ruby on Rails code review for Epicodus
 
 By Susha Dore 6.30.2017
 
-TO DO!!!!
-add page with all products, add usa scope
-
 ### Description
 Saves products and associated reviews using one-to-many, validations and callbacks
 
