@@ -1,8 +1,11 @@
-<%= render "layouts/errors", :object => @review %>
-
-<%= bootstrap_form_for [@product, @review] do |f| %>
-  <%= f.text_field :author, placeholder: "Username" %>
-  <%= f.text_area :content_body, label: "Reveiw", placeholder: "Must be between 50 and 250 characters" %>
-  <%= f.text_field :rating, placeholder: "Rate product on a scale of 1 to 5, 5 being the best" %>
-  <%= f.submit %>
-<% end %>
+<%= render('layouts/errors', :object => @review) %>
+<div class="row">
+  <div class="col-xs-6">
+    <%= bootstrap_form_for [@product, @review] do |f| %>
+      <%= f.text_field :author, placeholder: "Username" %>
+      <%= f.text_area :content_body, label: "Review", placeholder: "Must be between 50 and 250 characters" %>
+      <%= f.text_field :rating, placeholder: "Rate product on a scale of 1 to 5, 5 being the best" %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

@@ -4,23 +4,19 @@
 
 <h3>Recently Added!</h3>
 
-  <% @products.three_most_recent.each do |product| %>
-    <ul>
-      <li><%= link_to product.name, product_path(product) %> </li>
-    </ul>
-  <% end %>
+<% @products.three_most_recent.each do |product| %>
+  <h4><%= product.name %> </h4>
+<% end %>
 
-  <h3>Product with Most Reviews</h3>
-  <% @products.most_reviews.each do |product| %>
-    <ul>
-      <li><%= link_to product.name, product_path(product) %> </li>
-    </ul>
-  <% end %>
+<h3>Product with Most Reviews</h3>
+<% @products.most_reviews.each do |product| %>
+  <h4><%= product.name %></h4>
+<% end %>
 
-
-
-
-
-
-
+<h3>Product List:</h3>
+<% @products.each do |product| %>
+  <ul>
+    <li><%= link_to product.name, product_path(product) %></li>
+  </ul>
+<% end %>
 <%= link_to "Add Product", new_product_path %>
