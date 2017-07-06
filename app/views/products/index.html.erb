@@ -13,6 +13,11 @@
   <h4><%= product.name %></h4>
 <% end %>
 
+<% if !current_user %>
+<h4>You must be logged in to review a product.</h4>
+  <%= link_to "Sign up", '/signup' %> | <%= link_to "Log In", '/signin' %>
+<% end %>
+
 <h3>Product List:</h3>
 <% @products.each do |product| %>
   <ul>

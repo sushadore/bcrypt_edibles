@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     if @user
       flash[:notice] = "You're signed in."
       session[:user_id] = @user.id
-      redirect_to "/"
+      redirect_to products_path
     else
       flash[:alert] = "Email or password did not match. Please try again."
       redirect_to signin_path

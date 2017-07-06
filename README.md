@@ -21,6 +21,7 @@ Saves products and associated reviews using one-to-many, validations and callbac
   * `bundle install`
   * `rake db:create`
   * `rake db:migrate`
+  * `rake db:seed`
   * `rails s`
   * Open broswer and navigate to http://localhost:3000/
 
